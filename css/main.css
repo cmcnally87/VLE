@@ -1,0 +1,524 @@
+/*
+body {
+background-color:#D6E4E1;	
+text-align: center;	
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50em;
+	height:100%;
+	background-color:#D6E4E1;
+}
+
+mainLogin {
+	
+}
+
+	
+ol {
+	margin:0;
+	padding:0;
+	list-style: none;
+		}
+		
+li {
+	padding:2em;
+	background:#BFCFCC;
+	margin-bottom:2px;
+	text-align:left;
+	list-style: none
+	
+}
+form li#login {
+				
+	background:none;
+	margin-top:6px;
+}
+
+form label {
+	font-size:large;
+	color:#485C5A;	
+}
+
+#controls{
+	text-align:inherit;
+	float:left;	
+	
+}
+*/
+
+
+
+body {
+    margin: 0;
+	margin-top:0;
+    padding: 0;
+	background-color:#FFF;
+	clear:both;
+}
+
+p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	
+	
+}
+
+.info{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	text-align:center;
+	color:#14174b;
+	
+}
+
+	
+#container {
+	margin: 0 auto;
+	margin-top:0;
+	width:1000px;
+	/*-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	background:  -moz-linear-gradient(19% 75% 90deg,#206876, #015666);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015666), to(#206876));
+	-moz-box-shadow:0px -5px 300px #000000;
+	-webkit-box-shadow:0px -5px 300px #000000;
+	-webkit-border-radius: 15px;
+	background:#06F;*/
+}
+
+#header{
+color:#FFF;
+width:985px;
+margin: 0 auto;
+margin-top:0;
+background-color:#09F;
+clear:both;
+height:65px;
+padding:0;
+padding-top:35px;
+padding-left:15px;
+background-image:url(../images/headerDash.png);
+
+}
+
+#header h1{
+font-family:Arial, Helvetica, sans-serif;
+text-align:left;
+font-size:36px;	
+text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+
+#main{
+	background-color:#fff;
+	width:890px;
+	height:600px;
+	margin:0;
+	margin-top:0;
+	float:left;
+	}
+
+
+
+#footer
+{
+	
+    bottom:0;
+	width:1000px;
+	height:25px;
+	background-color:#003;
+	clear:both;
+	margin:0 auto;
+	margin-top:0;
+	
+}
+.clear{
+clear:both;	
+}
+
+#nav{
+	background-color:#FFF;
+	width:1000px;
+	height:100px;
+	margin:0;
+	margin-top:0;
+	display:inline;
+	}
+	
+	#nav li{
+		margin:0;
+		padding:0;
+	display:inline;
+	text-decoration:none;
+	list-style-type: none;
+	float:right;	
+	}
+	
+#chatWindow{
+	margin:0 auto;
+	padding:0;
+position: absolute;
+right:0;
+bottom:0;	
+}
+
+.headText{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:32px;
+	text-align:center;
+	color:#04859d;
+	
+	
+}
+
+
+/* ---------------------------------------------               			LOGIN SCREEN	-----------------------------------							 */
+		
+.mainLogin {
+	margin:0 auto;
+	margin-top:25px;
+	width:300px;  
+}
+
+.mainLogin form{
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #270644;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	background:  -moz-linear-gradient(19% 75% 90deg,#206876, #015666);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015666), to(#206876));
+	-moz-box-shadow:0px -5px 300px #04859D;
+    -webkit-box-shadow:0px -5px 300px #04859D;
+	
+}
+
+.mainLogin input {
+    width: 230px;
+    background:#FFF;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-top: 1px solid #04859D;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    -webkit-transition-property: -webkit-box-shadow, background;
+    -webkit-transition-duration: 0.25s;
+    -moz-box-shadow: 0px 0px 2px #000;
+    -webkit-box-shadow: 0px 0px 2px #000;
+	font-size:16px;
+	
+}
+
+.mainLogin input:hover {
+    -webkit-box-shadow: 0px 0px 4px #000;
+    background: #baf3fe;
+}
+ 
+input.submit {
+    width: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: #000 1px 1px;
+    border-top: 1px solid #37B6CE;
+    margin-top: 10px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5FBDCE), to(#37B6CE));
+    background:  -moz-linear-gradient(19% 75% 90deg,#37B6CE, #5FBDCE);
+}
+
+.mainLogin a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: underline;
+	text-align: center;
+	display: inline;	
+}
+
+.mainLogin label{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: left;
+}
+
+#welcomeHeader {
+margin:0 auto;
+padding: 0;
+width:1000px;
+height:300px;
+
+background-image:url(../images/welcomeHeader.png);
+}
+
+
+.output{
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#F00;
+	text-align:center;	
+	
+	
+}
+
+/* ---------------------------------------------               			REG SCREEN             	-----------------------------------							 */
+
+.reg {
+  
+  margin:0 auto;
+  width:500px;
+  display: inline-block;
+  text-align:center;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#F00;
+  font-size:16px;
+    
+}
+
+.reg p{
+font-family:Arial, Helvetica, sans-serif;
+  color:#F00;
+  font-size:16px;	
+}
+
+.reg form{
+	width: 300px;
+	padding: 20px;
+	border: 1px solid #270644;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	background:  -moz-linear-gradient(19% 75% 90deg,#206876, #015666);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015666), to(#206876));
+	-moz-box-shadow:0px -5px 300px #04859D;
+	-webkit-box-shadow:0px -5px 300px #04859D;
+}
+
+.reg input {
+    width: 230px;
+    background: #04859D;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-top: 1px solid #04859D;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    -webkit-transition-property: -webkit-box-shadow, background;
+    -webkit-transition-duration: 0.25s;
+    -moz-box-shadow: 0px 0px 2px #000;
+    -webkit-box-shadow: 0px 0px 2px #000;
+	
+}
+
+.reg input:hover {
+    -webkit-box-shadow: 0px 0px 4px #000;
+    background: #015666;
+}
+ 
+reg input.submit {
+    width: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: #000 1px 1px;
+    border-top: 1px solid #37B6CE;
+    margin-top: 10px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5FBDCE), to(#37B6CE));
+    background:  -moz-linear-gradient(19% 75% 90deg,#37B6CE, #5FBDCE);
+}
+
+.reg a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: underline;
+	text-align: center;
+	display: inline;	
+}
+
+.reg label{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: left;
+}
+
+/* ---------------------------------------------               			DASH BOARD             	-----------------------------------							 */
+
+
+.adminButton {
+	text-decoration: none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#37B6CE;
+	color:#FFF;
+	text-align:center;
+	margin: 2px;
+	padding: 2px;
+	width:135px;
+	height:40px;
+	border: 2px solid #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background:  -moz-linear-gradient(19% 75% 90deg,#206876, #015666);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015666), to(#206876));
+	
+}
+
+.adminButton:hover {
+    background: #663366;
+	
+}
+.logOut {
+	text-decoration: none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#37B6CE;
+	color:#FFF;
+	text-align:center;
+	margin: 2px;
+	padding: 2px;
+	width:130px;
+	height:40px;
+	border: 2px solid #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background:  -moz-linear-gradient(19% 75% 90deg,#206876, #015666);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015666), to(#206876));
+}
+
+.logOut:hover {
+    background: #663366;
+	
+}
+
+
+.buttons ol{
+display:inline;	
+}
+
+#addNav{
+	list-style:none;
+	margin:0,0,0,0;
+}
+
+#addNav li{
+	margin:0,0,10px,0;
+	display:inline;
+	position:relative;
+}
+
+#adminPageContent{
+
+}
+
+#subList{
+	list-style:none;
+	margin:0,0,0,0;
+}
+
+#subList li{
+	margin:0,0,10px,0;
+	display:inline;
+}
+
+
+	
+/* ---------------------------------------------               			Chat Box             	-----------------------------------							 */
+.chatBox{
+	border: 1px solid #000;
+	width: 320px;
+	margin:15px;
+	margin-right:0;
+	margin-bottom:0;
+	padding:5px;
+	padding-top:0;
+	height:500px;
+	float:right;
+	background-image:url(../images/chatbox.png);
+	
+}
+
+.chatBox .user{
+	text-align:right;
+	padding:0;
+	padding-right:5px;	
+}
+
+.chatBox #mainChat{
+	background-color:#FFF;
+	height:375px;
+	overflow:auto;	
+	
+}
+
+#newMessageContent{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	margin-top:5px;
+	padding: 0px;
+	height: 40px;
+	width:320px;
+}
+
+#newMessageSend{
+	height:30px;
+	width:80px;	
+}
+
+#subConList{
+	overflow:scroll;	
+	
+}
+
+/* ---------------------------------------------               			Forum             	-----------------------------------							 */
+
+.topic{
+	text-decoration:underline;
+	color:#00F;
+}
+
+.topic:hover{
+	text-decoration:underline;
+	color:#00F;
+	cursor:pointer;
+}
+
+#forumTable{
+	font-family:Arial, Helvetica, sans-serif;
+	
+	
+}
+
+#forumHeading{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#300;	
+}
+
+/* ---------------------------------------------               			Forum             	-----------------------------------							 */
+
+.fileTable {
+	width:700px;
+	border-width:2px;
+	border-spacing:2px;
+	border-style:groove;
+	border-color:#04859d;
+	border-collapse:separate;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+
+.fileTable td{
+	border-width:2px;
+	padding:5px;
+	border-style:double;
+	border-color:#04859d;	
+	
+}
+

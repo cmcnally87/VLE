@@ -1,0 +1,235 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 3.3.9.2\
+-- http://www.phpmyadmin.net\
+--\
+-- Host: localhost\
+-- Generation Time: May 29, 2012 at 09:28 AM\
+-- Server version: 5.5.9\
+-- PHP Version: 5.3.6\
+\
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";\
+\
+--\
+-- Database: `vle`\
+--\
+CREATE DATABASE `vle` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;\
+USE `vle`;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `admin`\
+--\
+\
+CREATE TABLE `admin` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `username` varchar(15) NOT NULL,\
+  `password` varchar(255) NOT NULL,\
+  `fName` varchar(25) NOT NULL,\
+  `sName` varchar(25) NOT NULL,\
+  `email` varchar(45) NOT NULL,\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;\
+\
+--\
+-- Dumping data for table `admin`\
+--\
+\
+INSERT INTO `admin` VALUES(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 'Admin', 'cmcnally87@gmail.com');\
+INSERT INTO `admin` VALUES(6, 'denise1', '2d579dc29360d8bbfbb4aa541de5afa9', 'Denise', 'McNally', 'mcnally-c@email.ulster.ac.uk');\
+INSERT INTO `admin` VALUES(7, 'Me', '2d579dc29360d8bbfbb4aa541de5afa9', 'me', 'me', 'mcnally-c@email.ulster.ac.uk');\
+INSERT INTO `admin` VALUES(8, 'Ciaran2', '2d579dc29360d8bbfbb4aa541de5afa9', 'Ciaran', 'McNally', 'mcnally-c@email.ulster.ac.uk');\
+INSERT INTO `admin` VALUES(9, 'dadw', '0353aa5c9829c7dc21efc7961e430fc5', 'awdad', 'awdad', 'mcnally-c@email.ulster.ac.uk');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `files`\
+--\
+\
+CREATE TABLE `files` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `time` int(11) NOT NULL,\
+  `fileLocation` text NOT NULL,\
+  `title` varchar(255) NOT NULL,\
+  `user` varchar(15) NOT NULL,\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;\
+\
+--\
+-- Dumping data for table `files`\
+--\
+\
+INSERT INTO `files` VALUES(19, 1338279611, 'files/Test.rtf', 'Test1', 'admin');\
+INSERT INTO `files` VALUES(20, 1338279631, 'files/Test2.rtf', 'Test2', 'admin');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `forumReplies`\
+--\
+\
+CREATE TABLE `forumReplies` (\
+  `questionId` int(4) NOT NULL,\
+  `aId` int(4) NOT NULL,\
+  `aName` varchar(65) NOT NULL,\
+  `aAnswer` longtext NOT NULL,\
+  `aDatetime` varchar(25) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `forumReplies`\
+--\
+\
+INSERT INTO `forumReplies` VALUES(0, 1, '', '', '15/04/12 04:42:33');\
+INSERT INTO `forumReplies` VALUES(2, 1, '', 'hello', '15/04/12 04:44:56');\
+INSERT INTO `forumReplies` VALUES(4, 1, '', '', '16/04/12 06:00:07');\
+INSERT INTO `forumReplies` VALUES(4, 2, 'admin', 'hello', '16/04/12 06:09:32');\
+INSERT INTO `forumReplies` VALUES(4, 3, 'admin', 'this works?', '16/04/12 06:10:49');\
+INSERT INTO `forumReplies` VALUES(4, 4, 'student', 'Yes it does', '16/04/12 06:11:26');\
+INSERT INTO `forumReplies` VALUES(3, 1, 'student', 'test', '16/04/12 06:13:14');\
+INSERT INTO `forumReplies` VALUES(2, 2, 'admin', 'Test', '25/04/12 05:04:30');\
+INSERT INTO `forumReplies` VALUES(5, 1, 'admin', 'hello', '26/04/12 06:15:20');\
+INSERT INTO `forumReplies` VALUES(6, 1, 'admin', 'hello', '03/05/12 00:47:33');\
+INSERT INTO `forumReplies` VALUES(6, 2, 'admin', 'hello', '03/05/12 00:49:06');\
+INSERT INTO `forumReplies` VALUES(5, 2, 'admin', 'hello', '29/05/12 05:48:33');\
+INSERT INTO `forumReplies` VALUES(6, 3, 'admin', 'hello', '29/05/12 06:52:46');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `forumTopic`\
+--\
+\
+CREATE TABLE `forumTopic` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `topic` varchar(255) NOT NULL,\
+  `message` text NOT NULL,\
+  `name` varchar(25) NOT NULL,\
+  `datetime` varchar(25) NOT NULL,\
+  `view` int(4) NOT NULL,\
+  `reply` int(4) NOT NULL,\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;\
+\
+--\
+-- Dumping data for table `forumTopic`\
+--\
+\
+INSERT INTO `forumTopic` VALUES(2, 'test', 'test', 'ciaran', '15/04/12 04:44:31', 57, 2);\
+INSERT INTO `forumTopic` VALUES(3, 'hello', 'hello', '', '15/04/12 04:54:51', 47, 1);\
+INSERT INTO `forumTopic` VALUES(4, 'test2', 'tes2', '', '16/04/12 05:16:54', 48, 4);\
+INSERT INTO `forumTopic` VALUES(5, 'test3', 'test', 'admin', '16/04/12 06:34:28', 23, 2);\
+INSERT INTO `forumTopic` VALUES(6, 'Testing', 'This is a fake topic', 'admin', '25/04/12 05:19:37', 29, 3);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `messages`\
+--\
+\
+CREATE TABLE `messages` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `username` varchar(15) NOT NULL,\
+  `messageContent` text NOT NULL,\
+  `messageTime` int(11) NOT NULL,\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=68 ;\
+\
+--\
+-- Dumping data for table `messages`\
+--\
+\
+INSERT INTO `messages` VALUES(10, 'admin', 'hello', 1332816430);\
+INSERT INTO `messages` VALUES(11, 'admin', 'hello', 1332816519);\
+INSERT INTO `messages` VALUES(12, 'student', 'hello', 1332816697);\
+INSERT INTO `messages` VALUES(13, 'admin', 'ddd', 1332816755);\
+INSERT INTO `messages` VALUES(14, 'admin', 'fawf', 1332816757);\
+INSERT INTO `messages` VALUES(15, 'admin', 'awfwaf', 1332816759);\
+INSERT INTO `messages` VALUES(16, 'admin', 'awfwf', 1332816761);\
+INSERT INTO `messages` VALUES(17, 'admin', 'gegge', 1332816765);\
+INSERT INTO `messages` VALUES(18, 'admin', 'gwaggs', 1332816768);\
+INSERT INTO `messages` VALUES(19, 'admin', 'wffgge', 1332816771);\
+INSERT INTO `messages` VALUES(20, 'admin', 'gegawg', 1332816774);\
+INSERT INTO `messages` VALUES(21, 'admin', 'gwagw', 1332816778);\
+INSERT INTO `messages` VALUES(22, 'admin', 'wadawf', 1332816785);\
+INSERT INTO `messages` VALUES(23, 'admin', 'hhh', 1332817044);\
+INSERT INTO `messages` VALUES(24, 'admin', 'jjjjj', 1332817055);\
+INSERT INTO `messages` VALUES(25, 'admin', 'hhh', 1332817219);\
+INSERT INTO `messages` VALUES(26, 'admin', 'blah', 1332817315);\
+INSERT INTO `messages` VALUES(27, 'admin', 'hh', 1332817365);\
+INSERT INTO `messages` VALUES(28, 'admin', 'eee', 1332817368);\
+INSERT INTO `messages` VALUES(29, 'admin', 'ee', 1332817369);\
+INSERT INTO `messages` VALUES(30, 'admin', 'e', 1332817371);\
+INSERT INTO `messages` VALUES(31, 'admin', 'eee', 1332817373);\
+INSERT INTO `messages` VALUES(32, 'admin', 'eee', 1332817375);\
+INSERT INTO `messages` VALUES(33, 'admin', 'eee', 1332817376);\
+INSERT INTO `messages` VALUES(34, 'admin', 'ee', 1332817378);\
+INSERT INTO `messages` VALUES(35, 'admin', 'hello', 1332817795);\
+INSERT INTO `messages` VALUES(36, 'admin', 'hhel', 1332817798);\
+INSERT INTO `messages` VALUES(37, 'admin', 'jjj', 1332817846);\
+INSERT INTO `messages` VALUES(38, 'admin', 'kk', 1332817881);\
+INSERT INTO `messages` VALUES(39, 'admin', 'jj', 1332817993);\
+INSERT INTO `messages` VALUES(40, 'admin', 'jj', 1332818500);\
+INSERT INTO `messages` VALUES(41, 'admin', 'jjjjvvvv', 1332818595);\
+INSERT INTO `messages` VALUES(42, 'student', 'hello ciaran', 1332841449);\
+INSERT INTO `messages` VALUES(43, 'bogman', 'hi liam', 1332841976);\
+INSERT INTO `messages` VALUES(44, 'admin', 'Hello Ciaran', 1332948019);\
+INSERT INTO `messages` VALUES(45, 'admin', 'hello', 1334086498);\
+INSERT INTO `messages` VALUES(46, 'student', 'hello again\\n', 1334086524);\
+INSERT INTO `messages` VALUES(47, 'admin', 'hello', 1334259255);\
+INSERT INTO `messages` VALUES(48, 'student', 'hello aaron', 1334685579);\
+INSERT INTO `messages` VALUES(49, 'admin', 'jj', 1334854447);\
+INSERT INTO `messages` VALUES(50, 'admin', 'eeee', 1334854450);\
+INSERT INTO `messages` VALUES(51, 'admin', 'fff', 1334854452);\
+INSERT INTO `messages` VALUES(52, 'admin', 'gggg', 1334854454);\
+INSERT INTO `messages` VALUES(53, 'admin', 'ggggg', 1334854457);\
+INSERT INTO `messages` VALUES(54, 'admin', 'eeeegsgs', 1334854460);\
+INSERT INTO `messages` VALUES(55, 'admin', 'segsegseg', 1334854462);\
+INSERT INTO `messages` VALUES(56, 'admin', 'segegsgesges', 1334854464);\
+INSERT INTO `messages` VALUES(57, 'admin', 'segesgseg', 1334854467);\
+INSERT INTO `messages` VALUES(58, 'admin', 'hello', 1334920329);\
+INSERT INTO `messages` VALUES(59, 'student', 'hello too', 1334920349);\
+INSERT INTO `messages` VALUES(60, 'admin', 'helo', 1334921153);\
+INSERT INTO `messages` VALUES(61, 'admin', 'hello', 1335381164);\
+INSERT INTO `messages` VALUES(62, 'admin', 'hello', 1335395228);\
+INSERT INTO `messages` VALUES(63, 'Ciaran2', 'Test post', 1335395403);\
+INSERT INTO `messages` VALUES(64, 'daryl', 'hello', 1335565152);\
+INSERT INTO `messages` VALUES(65, 'admin', 'hello', 1336002440);\
+INSERT INTO `messages` VALUES(66, 'admin', 'hello', 1336047767);\
+INSERT INTO `messages` VALUES(67, 'admin', 'hello', 1338269141);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `student`\
+--\
+\
+CREATE TABLE `student` (\
+  `id` int(11) NOT NULL AUTO_INCREMENT,\
+  `username` varchar(15) NOT NULL,\
+  `password` varchar(255) NOT NULL,\
+  `fName` varchar(25) NOT NULL,\
+  `sName` varchar(25) NOT NULL,\
+  `email` varchar(45) NOT NULL,\
+  `enable` tinyint(1) NOT NULL DEFAULT '0',\
+  PRIMARY KEY (`id`)\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;\
+\
+--\
+-- Dumping data for table `student`\
+--\
+\
+INSERT INTO `student` VALUES(1, 'student', 'cd73502828457d15655bbd7a63fb0bc8', 'Student1', 'Student1', 'cmcnally87@gmail.com', 0);\
+INSERT INTO `student` VALUES(6, 'Toal', '110d46fcd978c24f306cd7fa23464d73', 'Niall', 'Toal', 'toal07@hotmail.com', 0);\
+INSERT INTO `student` VALUES(7, 'hello', '5d41402abc4b2a76b9719d911017c592', 'hello', 'hello', 'hello@hello.com', 0);\
+INSERT INTO `student` VALUES(8, 'bogman', 'b54566358673866d1e117966ae706710', 'liam', 'mc nally', 'liam.mcnally@hotmail.co.uk', 0);\
+INSERT INTO `student` VALUES(9, 'Aaron', '5f4dcc3b5aa765d61d8327deb882cf99', 'Aaron', 'Lavery', 'lavery-a@email.ulster.ac.uk', 0);\
+INSERT INTO `student` VALUES(10, 'daryl', '9f9d51bc70ef21ca5c14f307980a29d8', 'daryl', 'harkin', 'darylh_18@hotmail.co.uk', 0);\
+}
